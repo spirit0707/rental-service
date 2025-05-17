@@ -34,5 +34,33 @@ const cityCoordinates = {
    };
  };
 
+const adaptFullOfferToClient = (offer, author) => ({
+  id: offer.id,
+  title: offer.title,
+  description: offer.description,
+  publishDate: offer.publishDate,
+  city: offer.city,
+  previewImage: offer.previewImage,
+  photos: offer.photos,
+  isPremium: offer.isPremium,
+  isFavorite: offer.isFavorite,
+  rating: Number(offer.rating),
+  type: offer.type,
+  rooms: offer.rooms,
+  guests: offer.guests,
+  price: offer.price,
+  features: offer.features,
+  commentsCount: offer.commentsCount,
+  latitude: offer.latitude,
+  longitude: offer.longitude,
+  author: author ? {
+    id: author.id,
+    username: author.username,
+    avatar: author.avatar,
+    userType: author.userType
+  } : null
+});
 
- export {adaptOfferToClient};
+
+
+ export {adaptOfferToClient, adaptFullOfferToClient};
