@@ -45,6 +45,7 @@ type FullOffer = {
     host: HostOffer;
     images: string[];
     maxAdults: number;
+    previewImage: string;
 };
 
-export {FullOffer, OffersList};
+export {FullOffer, OffersList, CityOffer};

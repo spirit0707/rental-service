@@ -1,8 +1,13 @@
 import { FavoriteCardList } from '../../components/favorite-card-list/favorite-card-list';
-import { offersList } from '../../mocks/offers-list';
 import { Logo } from '../../components/logo/logo';
+import { JSX } from 'react';
+import { OffersList } from '../../types/offer';
 
-function Favorites() {
+type FavoritesProps = {
+    offersList: OffersList[];
+};
+
+function Favorites({ offersList }: FavoritesProps): JSX.Element {
   const favoriteOffers = offersList.filter((offer) => offer.isFavorite);
 
   return (

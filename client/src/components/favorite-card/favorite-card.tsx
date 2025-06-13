@@ -1,4 +1,5 @@
 import { OffersList } from '../../types/offer';
+import { Link } from 'react-router-dom';
 
 type FavoriteCardProps = {
   offer: OffersList;
@@ -8,15 +9,15 @@ function FavoriteCard({ offer }: FavoriteCardProps) {
   return (
     <article className="favorites__card place-card">
       <div className="favorites__image-wrapper place-card__image-wrapper">
-        <a href="#">
+        <Link to={`/offer/${offer.id}`}>
           <img
             className="place-card__image"
-            src={`/img/${offer.previewImage}`}
+            src={offer.previewImage}
             width="150"
             height="110"
             alt={offer.title}
           />
-        </a>
+        </Link>
       </div>
       <div className="favorites__card-info place-card__info">
         <div className="place-card__price-wrapper">
@@ -32,7 +33,7 @@ function FavoriteCard({ offer }: FavoriteCardProps) {
           </div>
         </div>
         <h2 className="place-card__name">
-          <a href="#">{offer.title}</a>
+          <Link to={`/offer/${offer.id}`}>{offer.title}</Link>
         </h2>
         <p className="place-card__type">{offer.type}</p>
       </div>

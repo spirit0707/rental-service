@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { AppRoute } from "../../const";
 
@@ -10,19 +9,29 @@ type CitiesCardProps = {
     isPremium: boolean;
     previewImage: string;
     rating: number;
+    onHover: (id: string) => void;
 }
 
-function CitiesCard ({id, title, type, price, isPremium, previewImage, rating}: CitiesCardProps) {
-  const[, setOfferId] = useState('');
+function CitiesCard ({id, title, type, price, isPremium, previewImage, rating, onHover}: CitiesCardProps) {
     return(
-        <article className="cities__card place-card" onMouseOver={() => setOfferId(id)} onMouseOut={() => setOfferId('')}>
+        <article 
+          className="cities__card place-card" 
+          onMouseEnter={() => onHover(id)} 
+          onMouseLeave={() => onHover('')}
+        >
           {isPremium ? (
         <div className="place-card__mark">
           <span>Premium</span>
         </div>) : null}
         <div className="cities__image-wrapper place-card__image-wrapper">
           <Link to={`${AppRoute.Offer}/${id}`}>
-            <img className="place-card__image" src={previewImage} width="260" height="200" alt={title} />
+            <img 
+              className="place-card__image" 
+              src={`/${previewImage}`} 
+              width="260" 
+              height="200" 
+              alt={title} 
+            />
           </Link>
         </div>
         <div className="place-card__info">

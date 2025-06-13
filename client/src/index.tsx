@@ -1,20 +1,21 @@
-import ReactDOM from "react-dom/client";
-import { StrictMode } from "react";
-import { App } from "./components/app/app";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { App } from './components/app/app';
+import { offers } from "./mocks/offers-list";
+import { offers as fullOffers } from "./mocks/offer";
 import { Setting } from "./const";
-import { offers } from './mocks/offer'
-import { offersList } from "./mocks/offers-list";
+import './styles/map.css';
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  <StrictMode>
-    <App
+  <React.StrictMode>
+    <App 
+      offersList={offers}
+      offers={fullOffers}
       rentalOffersCount={Setting.rentalOffersCount}
-      offersList={offersList}
-      offers={offers}
     />
-  </StrictMode>
+  </React.StrictMode>
 );

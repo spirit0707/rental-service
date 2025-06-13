@@ -2,49 +2,141 @@ import { OffersList } from "../types/offer";
 
 export const offersList: OffersList[] = [
   {
-    id: "bbb868e-3f92-446d-9a68-cb64b5638e2b",
-    title: "Wood and stone place",
-    type: "apartment",
+    id: 'offer-1',
+    title: 'Wood and stone place',
+    type: 'apartment',
     price: 370,
-    previewImage: "11.jpg",
+    previewImage: "img/11.jpg",
     city: {
-      name: "Paris",
+      name: "Amsterdam",
       location: {
-        latitude: 48.85661,
-        longitude: 2.351499,
+        latitude: 52.3909553943508,
+        longitude: 4.85309666406198,
         zoom: 13,
       },
     },
     location: {
-      latitude: 48.866614,
-      longitude: 2.342499,
+      latitude: 52.3909553943508,
+      longitude: 4.85309666406198,
       zoom: 16,
     },
     isFavorite: true,
     isPremium: false,
-    rating: 4.9,
+    rating: 4.9
   },
   {
-    id: "c3f8b1d-4a2e-4b5f-9a6c-7d8e9f0a1b2c",
-    title: "Beautiful & luxurious apartment at great location",
-    type: "apartment",
+    id: 'offer-2',
+    title: 'Beautiful & luxurious apartment at great location',
+    type: 'apartment',
     price: 120,
-    previewImage: "12.jpg",
+    previewImage: "img/12.jpg",
     city: {
-      name: "Cologne",
+      name: "Amsterdam",
       location: {
-        latitude: 50.937531,
-        longitude: 6.960279,
+        latitude: 52.3609553943508,
+        longitude: 4.85309666406198,
         zoom: 13,
       },
     },
     location: {
-      latitude: 50.947531,
-      longitude: 6.970279,
+      latitude: 52.3609553943508,
+      longitude: 4.85309666406198,
       zoom: 16,
     },
     isFavorite: false,
     isPremium: true,
-    rating: 4.8,
+    rating: 4.8
   },
+  {
+    id: 'offer-3',
+    title: 'Canal View Prinsengracht',
+    type: 'apartment',
+    price: 200,
+    previewImage: "img/13.jpg",
+    city: {
+      name: "Amsterdam",
+      location: {
+        latitude: 52.3909553943508,
+        longitude: 4.929309666406198,
+        zoom: 13,
+      },
+    },
+    location: {
+      latitude: 52.3909553943508,
+      longitude: 4.929309666406198,
+      zoom: 16,
+    },
+    isFavorite: false,
+    isPremium: false,
+    rating: 4.7
+  },
+  {
+    id: 'offer-4',
+    title: 'Nice, cozy, warm big bed apartment',
+    type: 'apartment',
+    price: 180,
+    previewImage: "img/14.jpg",
+    city: {
+      name: "Amsterdam",
+      location: {
+        latitude: 52.3809553943508,
+        longitude: 4.939309666406198,
+        zoom: 13,
+      },
+    },
+    location: {
+      latitude: 52.3809553943508,
+      longitude: 4.939309666406198,
+      zoom: 16,
+    },
+    isFavorite: true,
+    isPremium: true,
+    rating: 4.6
+  },
+  {
+    id: 'offer-5',
+    title: 'Stylish apartment in the heart of the city',
+    type: 'apartment',
+    price: 250,
+    previewImage: "img/15.jpg",
+    city: {
+      name: "Amsterdam",
+      location: {
+        latitude: 52.3709553943508,
+        longitude: 4.919309666406198,
+        zoom: 13,
+      },
+    },
+    location: {
+      latitude: 52.3709553943508,
+      longitude: 4.919309666406198,
+      zoom: 16,
+    },
+    isFavorite: false,
+    isPremium: false,
+    rating: 4.5
+  },
+  {
+    id: 'offer-6',
+    title: 'Modern apartment with city views',
+    type: 'apartment',
+    price: 300,
+    previewImage: "img/16.jpg",
+    city: {
+      name: "Amsterdam",
+      location: {
+        latitude: 52.4009553943508,
+        longitude: 4.909309666406198,
+        zoom: 13,
+      },
+    },
+    location: {
+      latitude: 52.4009553943508,
+      longitude: 4.909309666406198,
+      zoom: 16,
+    },
+    isFavorite: true,
+    isPremium: true,
+    rating: 4.4
+  }
 ];

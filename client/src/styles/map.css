@@ -1,0 +1,10 @@
+.cities__map {
+  width: 100%;
+  align-self: stretch;
+  background-image: none !important;
+}
+
+.cities__map .leaflet-container {
+  width: 100%;
+  height: 100%;
+} 
