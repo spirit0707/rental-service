@@ -103,7 +103,7 @@ export async function getFavoriteOffers(req, res, next) {
 
 export const toggleFavorite = async (req, res, next) => {
   try {
-    const {getReviewsByOfferId, status} = req.params;
+    const {offerId, status} = req.params;
 
     const offer = await Offer.findByPk(offerId);
     if (!offer) {
